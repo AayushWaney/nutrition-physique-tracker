@@ -1,0 +1,17 @@
+# Secret Keys
+.env
+
+# PyInstaller Folders & Files
+build/
+dist/
+*.spec
+
+# Virtual Environments
+.venv/
+venv/
+
+# IDE & Cache
+.idea/
+__pycache__/
+*.pyc
+

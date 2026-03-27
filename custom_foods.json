@@ -1,0 +1,52 @@
+{
+    "jawar bhakar": {
+        "Calories": 150,
+        "Protein": 4.0,
+        "Fats": 1.5,
+        "Carbs": 30.0,
+        "Fiber": 4.0,
+        "Sugar": 0.0,
+        "Sodium": 5.0,
+        "Cholesterol": 0.0
+    },
+    "1 jawar bhakar": {
+        "Calories": 150,
+        "Protein": 4.0,
+        "Fats": 1.5,
+        "Carbs": 30.0,
+        "Fiber": 4.0,
+        "Sugar": 0.0,
+        "Sodium": 5.0,
+        "Cholesterol": 0.0
+    },
+    "muscleblaze pr": {
+        "Calories": 178,
+        "Protein": 30.0,
+        "Fats": 1.5,
+        "Carbs": 4.0,
+        "Fiber": 0.0,
+        "Sugar": 0.0,
+        "Sodium": 50.0,
+        "Cholesterol": 5.0
+    },
+    "muscleblaze pr whey": {
+        "Calories": 178,
+        "Protein": 30.0,
+        "Fats": 1.5,
+        "Carbs": 4.0,
+        "Fiber": 0.0,
+        "Sugar": 0.0,
+        "Sodium": 50.0,
+        "Cholesterol": 5.0
+    },
+    "1 scoop muscleblaze pr": {
+        "Calories": 178,
+        "Protein": 30.0,
+        "Fats": 1.5,
+        "Carbs": 4.0,
+        "Fiber": 0.0,
+        "Sugar": 0.0,
+        "Sodium": 50.0,
+        "Cholesterol": 5.0
+    }
+}
