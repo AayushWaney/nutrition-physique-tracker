@@ -10,13 +10,17 @@ from pathlib import Path
 from dotenv import load_dotenv
 
 # SECURE APP FOLDER & ENV
-load_dotenv()
-API_KEY = os.getenv("CALORIE_API_KEY")
-EXERCISE_ENDPOINT = "https://api.calorieninjas.com/v1/nutrition"
-
-# Safely creates a dedicated folder for data in home directory
+# 1. Create the safe folder
 APP_DIR = Path.home() / "NutritionTrackerData"
 APP_DIR.mkdir(parents=True, exist_ok=True)
+
+# 2. Tell dotenv to look for the secret file inside that specific folder
+ENV_PATH = APP_DIR / ".env"
+load_dotenv(ENV_PATH)
+
+# 3. Load the key
+API_KEY = os.getenv("CALORIE_API_KEY")
+EXERCISE_ENDPOINT = "https://api.calorieninjas.com/v1/nutrition"
 
 # Define the absolute paths for databases
 DB_PATH = APP_DIR / "daily_calories.json"
@@ -403,8 +407,16 @@ ctk.set_appearance_mode("dark")
 ctk.set_default_color_theme("blue")
 
 window = ctk.CTk()
-window.title("My Nutrition Tracker")
+window.title("Daily Nutrition Tracker")
 window.geometry("600x850")
+
+if not API_KEY:
+    dialog = ctk.CTkInputDialog(text="Enter your free CalorieNinjas API Key to start:", title="First Run Setup")
+    API_KEY = dialog.get_input()
+    if API_KEY:
+        with open(ENV_PATH, "w") as f:
+            f.write(f"CALORIE_API_KEY={API_KEY}")
+
 
 initial_profile = load_user_profile()
 

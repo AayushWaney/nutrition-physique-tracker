@@ -5,7 +5,7 @@
 ![Matplotlib](https://img.shields.io/badge/Data%20Viz-Matplotlib-green)
 ![Architecture](https://img.shields.io/badge/Design-Monolithic→Modular-blueviolet)
 
-A privacy-focused desktop nutrition tracking application with API-powered food analysis, body-fat estimation, and real-time analytics. This platform combines a modern graphical user interface with REST API integration, local data caching, and mathematical algorithms to monitor macronutrients, micronutrients, and body composition.
+A privacy-focused desktop nutrition tracking application with API-powered food analysis, body-fat estimation, and real-time analytics without relying on external databases or cloud infrastructure. This platform combines a modern graphical user interface with REST API integration, local data caching, and mathematical formulas to monitor macronutrients, micronutrients, and body composition.
 
 Most calorie tracking apps either require paid subscriptions or store user data in cloud services. This project explores a simple, locally-hosted desktop alternative that keeps all user data stored locally on your machine while still leveraging external APIs for nutritional information.
 
@@ -15,7 +15,7 @@ Built as part of a personal 90-day fitness and programming challenge to reach 12
 
 ## 🎥 Demo
 
-*(Demo will be added soon)*
+![Demo](screenshots/demo.gif)
 
 ---
 
@@ -28,21 +28,19 @@ This application was built with a focus on rapid iteration and local privacy. To
 ## 🚀 Features
 
 - **API Food Logger:** Integrates with the CalorieNinjas REST API to instantly fetch comprehensive macro and micronutrient data via natural language queries (e.g., "2 boiled eggs").
-- **Local Data Caching:** Checks a local custom_foods.json file to calculate exact macros for niche supplements or regional meals, bypassing the API to ensure accuracy for custom items.
-- **Advanced Physique Tracking:** Implements the algorithmic U.S. Navy Body Fat formula to calculate real-time body fat percentages using daily waist, neck, and height inputs.
+- **Local Data Caching:** Checks a local custom_foods.json file to calculate exact macros for niche supplements or regional meals. Optimized to minimize API calls through local caching, reducing redundant network requests and improving app responsiveness.
+- **Advanced Physique Tracking:** Implements the established U.S. Navy Body Fat formula to calculate real-time body fat percentages using daily waist, neck, and height inputs.
 - **Automated Target Calculation:** Uses established Basal Metabolic Rate (BMR) and Total Daily Energy Expenditure (TDEE) formulas to automatically suggest precise caloric deficits for cutting phases.
 - **Dynamic Data Visualization:** Utilizes Matplotlib to generate a dual-axis, 7-day graphical trend analysis comparing total calorie consumption against body weight fluctuations.
 - **Persistent State Management:** Features robust JSON document storage for seamless session persistence, daily streak tracking, and secure environment variable handling via `python-dotenv`.
-
-
 
 ---
 
 ## 🌍 Impact
 
-- Enables fully offline nutrition tracking with zero cloud dependency
-- Reduces external API usage through intelligent local caching
-- Demonstrates a privacy-first alternative to subscription-based fitness applications
+- Eliminates reliance on subscription-based fitness apps by providing a fully local alternative.
+- Reduces API dependency through intelligent caching of frequently logged foods.
+- Demonstrates how privacy-first desktop applications can replicate core features of modern cloud-based apps.
 
 ---
 ## 🧠 Key Engineering Challenges Solved
@@ -82,7 +80,7 @@ This application was built with a focus on rapid iteration and local privacy. To
 - Python 3.14
 - `requests` (Synchronous HTTP requests)
 - `json` & `pathlib` (OS-agnostic document storage)
-- `math` & `datetime` (Algorithmic processing and streak tracking)
+- `math` & `datetime` (Formula-based processing and streak tracking)
 
 **APIs / Security**
 - CalorieNinjas Nutrition API
@@ -92,19 +90,18 @@ This application was built with a focus on rapid iteration and local privacy. To
 ---
 
 ## 📸 Screenshots
-*(Screenshots will be added soon)*
 
 ### 1. Interactive Food Logger & Macros
 *(Featuring the dynamic budget progress bar and real-time macro summaries)*
-
+![Logger Screenshot](screenshots/food_logger.png)
 
 ### 2. Physique Dashboard & Body Tracker
-*(Distraction-free measurement inputs and algorithmic body fat percentage generation)*
-
+*(Distraction-free measurement inputs and formula-based body fat percentage generation)*
+![Body Tracker Screenshot](screenshots/body_tracker.png)
 
 ### 3. 7-Day Trend Analytics
 *(Matplotlib-powered dual-axis charting of caloric intake vs. body weight)*
-
+![Analytics Screenshot](screenshots/analytics.png)
 
 ---
 
